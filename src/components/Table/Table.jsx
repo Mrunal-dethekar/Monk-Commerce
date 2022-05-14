@@ -8,8 +8,9 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import Checkbox from "@mui/material/Checkbox";
-import { setTempState } from "../redux/action";
+import { setTempState } from "../../redux/action";
 import { useDispatch } from "react-redux";
+import "./table.css";
 
 var myProduct = [];
 
@@ -30,7 +31,9 @@ function EnhancedTableHead(props) {
             }}
           />
         </TableCell>
-        <TableCell>{myProduct.title}</TableCell>
+        <TableCell style={{display:"flex",alignItems:"center"}} className="headTableCell"><img src={myProduct.image.src} alt="" />{myProduct.title}</TableCell>
+        <TableCell align="right">Quant</TableCell>
+        <TableCell align="right">Price</TableCell>
       </TableRow>
     </TableHead>
   );
@@ -128,10 +131,8 @@ export default function EnhancedTable({ product }) {
                     >
                       {row.title}
                     </TableCell>
-                    <TableCell align="right">{row.calories}</TableCell>
-                    <TableCell align="right">{row.fat}</TableCell>
-                    <TableCell align="right">{row.carbs}</TableCell>
-                    <TableCell align="right">{row.protein}</TableCell>
+                    <TableCell align="right">{row.inventory_quantity}</TableCell>
+                    <TableCell align="right">₹{row.price}</TableCell>
                   </TableRow>
                 );
               })}

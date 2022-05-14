@@ -10,6 +10,7 @@ import SubProduct from "../SubProduct/SubProduct";
 const Product = ({ element }) => {
   const [onOff, setOnOff] = useState(0);
   const [discount, setDisount] = useState(0);
+  const [inputValue, setInputValue] = useState("0") 
 
   const dispatch = useDispatch();
 
@@ -43,10 +44,10 @@ const Product = ({ element }) => {
             className="selectDiscount"
             style={{ display: `${discount ? "flex" : "none"}` }}
           >
-            <input type="text" value={0} />
+            <input type="text" value={inputValue} onChange={(e)=>setInputValue(e.target.value)}/>
             <select name="cars" id="cars">
               <option value="% off">% Off</option>
-              <option value="saab">Flat Off</option>
+              <option value="Flat Off">Flat Off</option>
             </select>
           </div>
           <div

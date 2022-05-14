@@ -1,3 +1,3 @@
 # Monk-Commerce
 
-[Live Demo](https://627f59af9c197534fe0cf484--monk-commerce.netlify.app/).
+[Live Demo](https://627f609ff4c6d5401d35c7e4--monk-commerce.netlify.app/).

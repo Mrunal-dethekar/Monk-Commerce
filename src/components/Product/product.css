@@ -1,0 +1,130 @@
+.product {
+  width: 100%;
+  padding: 20px 0 2% 0;
+  display: flex;
+  justify-content: center;
+}
+
+.fa-grip-vertical {
+  font-size: 25px;
+  color: gray;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  left: -20px;
+}
+
+.product .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  padding: 0 5px;
+  width: 100%;
+  position: relative;
+}
+
+.product .box .row {
+  display: flex;
+  flex: 20;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  /* width: 100%; */
+  height: 40px;
+  border: 1px solid rgba(128, 128, 128, 0.539);
+  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 4px;
+}
+
+.product .box .row p {
+  font-size: 1.1em;
+}
+
+.fa-pen {
+  font-size: 22px;
+  color: green;
+  cursor: pointer;
+}
+
+.pen {
+  width: 30px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pen:hover {
+  background-color: rgba(211, 211, 211, 0.71);
+}
+
+.product .box .fa-xmark {
+  padding: 0 10px;
+  font-size: 25px;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.product .box:hover .fa-xmark {
+  visibility: visible;
+}
+
+.viewMore {
+  width: 100%;
+}
+
+.viewMore span {
+  padding-right: 8%;
+  color: blue;
+  cursor: pointer;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.selectDiscount {
+  height: 100%;
+  flex: 9;
+  margin-left: 2%;
+  display: flex;
+}
+
+.selectDiscountLabel {
+  height: 100%;
+  background-color: green;
+  color: white;
+  font-size: 1.2em;
+  flex: 9;
+  margin-left: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 4px;
+}
+
+.selectDiscount input {
+  width: 50%;
+  padding-left: 5%;
+  margin-right: 8px;
+  padding: 0 5%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 4px;
+  border: 1px solid gray;
+}
+
+.selectDiscount input:focus {
+  outline-color: green;
+}
+
+.selectDiscount select {
+  width: 50%;
+  min-width: 75px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 4px;
+  border: 1px solid gray;
+}
+
+.selectDiscount select:focus {
+  outline-color: green;
+}

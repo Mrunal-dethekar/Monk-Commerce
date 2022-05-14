@@ -1,0 +1,50 @@
+.subProduct {
+  width: 100%;
+  padding: 2% 0 0 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.fa-grip-vertical {
+  font-size: 25px;
+  color: gray;
+  padding: 0;
+  cursor: pointer;
+  flex: 1;
+}
+
+.subProduct .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  padding: 0 5px;
+  width: 100%;
+}
+
+.subProduct .box .row {
+  border-radius: 20px;
+  display: flex;
+  flex: 20;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 0 20px;
+  height: 40px;
+  border: 1px solid rgba(128, 128, 128, 0.539);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.subProduct .box .row p {
+  font-size: 1.1em;
+}
+
+.subProduct .box .fa-xmark {
+  padding: 0 10px;
+  font-size: 25px;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.subProduct .box:hover .fa-xmark {
+  visibility: visible;
+}

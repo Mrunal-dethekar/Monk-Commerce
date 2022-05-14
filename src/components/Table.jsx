@@ -8,8 +8,11 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import Checkbox from "@mui/material/Checkbox";
+import { setTempState } from "../redux/action";
+import { useDispatch } from "react-redux";
 
 var myProduct = [];
+
 function EnhancedTableHead(props) {
   const { onSelectAllClick, numSelected, rowCount } = props;
 
@@ -34,8 +37,23 @@ function EnhancedTableHead(props) {
 }
 
 export default function EnhancedTable({ product }) {
+  const dispatch = useDispatch();
+
   myProduct = product;
+  var tempData = {};
+
   const [selected, setSelected] = React.useState([]);
+
+  if (selected.length != 0) {
+    tempData.title = product.title;
+    tempData.rows = selected;
+  } else {
+    tempData = {};
+  }
+
+  React.useEffect(() => {
+    dispatch(setTempState(tempData));
+  }, [selected]);
 
   const handleSelectAllClick = (event) => {
     if (event.target.checked) {
@@ -72,7 +90,7 @@ export default function EnhancedTable({ product }) {
     <Box sx={{ width: "100%" }}>
       <Paper sx={{ width: "100%", mb: 2 }}>
         <TableContainer>
-          <Table sx={{ minWidth: 750 }} aria-labelledby="tableTitle">
+          <Table aria-labelledby="tableTitle">
             <EnhancedTableHead
               numSelected={selected.length}
               onSelectAllClick={handleSelectAllClick}
